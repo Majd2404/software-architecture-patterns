@@ -5,24 +5,16 @@
       .subtitle { font: bold 16px sans-serif; fill: #34495e; }
       .text { font: 13px sans-serif; fill: #555; }
       .small-text { font: 11px sans-serif; fill: #666; }
-      .header-box { fill: #3498db; }
-      .arch-box { fill: #ecf0f1; stroke: #95a5a6; stroke-width: 2; }
-      .mono-color { fill: #e74c3c; }
-      .layer-color { fill: #f39c12; }
-      .decouple-color { fill: #27ae60; }
-      .micro-color { fill: #9b59b6; }
       .white-text { fill: white; font-weight: bold; }
     </style>
   </defs>
   
-  <!-- Title -->
-  <rect x="0" y="0" width="1400" height="60" class="header-box"/>
+  <rect x="0" y="0" width="1400" height="60" fill="#3498db"/>
   <text x="700" y="40" text-anchor="middle" class="title white-text">Software Architecture Patterns - Quick Comparison</text>
   
-  <!-- Monolithic -->
   <g id="monolithic">
-    <rect x="50" y="100" width="300" height="280" rx="10" class="arch-box"/>
-    <rect x="50" y="100" width="300" height="40" rx="10" class="mono-color"/>
+    <rect x="50" y="100" width="300" height="280" rx="10" fill="#ecf0f1" stroke="#95a5a6" stroke-width="2"/>
+    <rect x="50" y="100" width="300" height="40" rx="10" fill="#e74c3c"/>
     <text x="200" y="127" text-anchor="middle" class="subtitle white-text">Monolithic</text>
     
     <rect x="100" y="170" width="200" height="180" rx="5" fill="#c0392b" stroke="#a93226" stroke-width="2"/>
@@ -33,15 +25,14 @@
     <rect x="110" y="270" width="180" height="30" rx="3" fill="#e67e22"/>
     <text x="200" y="290" text-anchor="middle" class="small-text" fill="white">Database</text>
     
-    <text x="70" y="400" class="small-text">✅ Simple development</text>
-    <text x="70" y="420" class="small-text">❌ Hard to scale</text>
-    <text x="70" y="440" class="small-text">👥 Small teams</text>
+    <text x="70" y="400" class="small-text">Simple development</text>
+    <text x="70" y="420" class="small-text">Hard to scale</text>
+    <text x="70" y="440" class="small-text">Small teams</text>
   </g>
   
-  <!-- Layered/N-Tier -->
   <g id="layered">
-    <rect x="400" y="100" width="300" height="280" rx="10" class="arch-box"/>
-    <rect x="400" y="100" width="300" height="40" rx="10" class="layer-color"/>
+    <rect x="400" y="100" width="300" height="280" rx="10" fill="#ecf0f1" stroke="#95a5a6" stroke-width="2"/>
+    <rect x="400" y="100" width="300" height="40" rx="10" fill="#f39c12"/>
     <text x="550" y="127" text-anchor="middle" class="subtitle white-text">Layered (N-Tier)</text>
     
     <rect x="450" y="170" width="200" height="35" rx="3" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
@@ -56,23 +47,20 @@
     <rect x="450" y="290" width="200" height="35" rx="3" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
     <text x="550" y="312" text-anchor="middle" class="small-text" fill="white">Database</text>
     
-    <text x="420" y="400" class="small-text">✅ Clear separation</text>
-    <text x="420" y="420" class="small-text">❌ Can be monolithic</text>
-    <text x="420" y="440" class="small-text">🏢 Enterprise apps</text>
+    <text x="420" y="400" class="small-text">Clear separation</text>
+    <text x="420" y="420" class="small-text">Enterprise apps</text>
   </g>
   
-  <!-- Decoupled -->
   <g id="decoupled">
-    <rect x="750" y="100" width="300" height="280" rx="10" class="arch-box"/>
-    <rect x="750" y="100" width="300" height="40" rx="10" class="decouple-color"/>
-    <text x="900" y="127" text-anchor="middle" class="subtitle white-text">Decoupled/Headless</text>
+    <rect x="750" y="100" width="300" height="280" rx="10" fill="#ecf0f1" stroke="#95a5a6" stroke-width="2"/>
+    <rect x="750" y="100" width="300" height="40" rx="10" fill="#27ae60"/>
+    <text x="900" y="127" text-anchor="middle" class="subtitle white-text">Decoupled</text>
     
     <rect x="800" y="170" width="200" height="50" rx="5" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
     <text x="900" y="200" text-anchor="middle" class="text" fill="white">Frontend</text>
     <text x="900" y="215" text-anchor="middle" class="small-text" fill="white">Angular/React</text>
     
-    <path d="M 900 220 L 900 245" fill="none" stroke="#34495e" stroke-width="2" marker-end="url(#arrow)"/>
-    <text x="920" y="235" class="small-text">API</text>
+    <text x="900" y="235" text-anchor="middle" class="small-text">API</text>
     
     <rect x="800" y="245" width="200" height="50" rx="5" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
     <text x="900" y="275" text-anchor="middle" class="text" fill="white">Backend API</text>
@@ -81,110 +69,48 @@
     <rect x="825" y="310" width="150" height="30" rx="3" fill="#e67e22"/>
     <text x="900" y="330" text-anchor="middle" class="small-text" fill="white">Database</text>
     
-    <text x="770" y="400" class="small-text">✅ Independent deploy</text>
-    <text x="770" y="420" class="small-text">✅ Multiple frontends</text>
-    <text x="770" y="440" class="small-text">🌐 Modern web apps</text>
+    <text x="770" y="400" class="small-text">Independent deploy</text>
+    <text x="770" y="420" class="small-text">Multiple frontends</text>
   </g>
   
-  <!-- Microservices -->
   <g id="microservices">
-    <rect x="1100" y="100" width="250" height="280" rx="10" class="arch-box"/>
-    <rect x="1100" y="100" width="250" height="40" rx="10" class="micro-color"/>
+    <rect x="1100" y="100" width="250" height="280" rx="10" fill="#ecf0f1" stroke="#95a5a6" stroke-width="2"/>
+    <rect x="1100" y="100" width="250" height="40" rx="10" fill="#9b59b6"/>
     <text x="1225" y="127" text-anchor="middle" class="subtitle white-text">Microservices</text>
     
     <rect x="1120" y="155" width="210" height="25" rx="3" fill="#95a5a6"/>
     <text x="1225" y="172" text-anchor="middle" class="small-text">API Gateway</text>
     
     <rect x="1125" y="195" width="85" height="40" rx="3" fill="#3498db" stroke="#2980b9" stroke-width="1"/>
-    <text x="1167" y="210" text-anchor="middle" class="small-text" fill="white">User</text>
-    <text x="1167" y="225" text-anchor="middle" class="small-text" fill="white">Service</text>
+    <text x="1167" y="220" text-anchor="middle" class="small-text" fill="white">User Service</text>
     
     <rect x="1220" y="195" width="85" height="40" rx="3" fill="#e74c3c" stroke="#c0392b" stroke-width="1"/>
-    <text x="1262" y="210" text-anchor="middle" class="small-text" fill="white">Order</text>
-    <text x="1262" y="225" text-anchor="middle" class="small-text" fill="white">Service</text>
+    <text x="1262" y="220" text-anchor="middle" class="small-text" fill="white">Order Service</text>
     
-    <rect x="1125" y="245" width="85" height="40" rx="3" fill="#27ae60" stroke="#229954" stroke-width="1"/>
-    <text x="1167" y="260" text-anchor="middle" class="small-text" fill="white">Payment</text>
-    <text x="1167" y="275" text-anchor="middle" class="small-text" fill="white">Service</text>
-    
-    <rect x="1220" y="245" width="85" height="40" rx="3" fill="#f39c12" stroke="#d68910" stroke-width="1"/>
-    <text x="1262" y="260" text-anchor="middle" class="small-text" fill="white">Email</text>
-    <text x="1262" y="275" text-anchor="middle" class="small-text" fill="white">Service</text>
-    
-    <rect x="1135" y="300" width="65" height="20" rx="2" fill="#e67e22"/>
-    <text x="1167" y="314" text-anchor="middle" class="small-text" fill="white">DB</text>
-    
-    <rect x="1230" y="300" width="65" height="20" rx="2" fill="#e67e22"/>
-    <text x="1262" y="314" text-anchor="middle" class="small-text" fill="white">DB</text>
-    
-    <text x="1120" y="400" class="small-text">✅ Independent scale</text>
-    <text x="1120" y="420" class="small-text">❌ Complex setup</text>
-    <text x="1120" y="440" class="small-text">🏭 Large systems</text>
+    <text x="1120" y="400" class="small-text">Independent scale</text>
+    <text x="1120" y="420" class="small-text">Large systems</text>
   </g>
   
-  <!-- Bottom Section - More Architectures -->
-  <rect x="50" y="480" width="1300" height="300" rx="10" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
-  <text x="700" y="510" text-anchor="middle" class="subtitle">Other Important Patterns</text>
+  <rect x="50" y="480" width="1300" height="280" rx="10" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
+  <text x="700" y="510" text-anchor="middle" class="subtitle">Other Architecture Patterns</text>
   
-  <!-- Event-Driven -->
-  <g id="event-driven">
-    <rect x="100" y="535" width="180" height="100" rx="5" fill="#16a085" stroke="#138d75" stroke-width="2"/>
-    <text x="190" y="555" text-anchor="middle" class="text" fill="white">Event-Driven</text>
-    <text x="190" y="580" text-anchor="middle" class="small-text" fill="white">Producer → Queue</text>
-    <text x="190" y="600" text-anchor="middle" class="small-text" fill="white">→ Consumer</text>
-    <text x="120" y="655" class="small-text">Real-time processing</text>
-    <text x="120" y="675" class="small-text">Kafka, RabbitMQ</text>
-  </g>
+  <rect x="100" y="535" width="180" height="100" rx="5" fill="#16a085" stroke="#138d75" stroke-width="2"/>
+  <text x="190" y="565" text-anchor="middle" class="text" fill="white">Event-Driven</text>
+  <text x="190" y="590" text-anchor="middle" class="small-text" fill="white">Kafka, RabbitMQ</text>
   
-  <!-- Serverless -->
-  <g id="serverless">
-    <rect x="320" y="535" width="180" height="100" rx="5" fill="#8e44ad" stroke="#7d3c98" stroke-width="2"/>
-    <text x="410" y="555" text-anchor="middle" class="text" fill="white">Serverless</text>
-    <text x="410" y="580" text-anchor="middle" class="small-text" fill="white">Functions as Service</text>
-    <text x="410" y="600" text-anchor="middle" class="small-text" fill="white">AWS Lambda</text>
-    <text x="340" y="655" class="small-text">Auto-scaling</text>
-    <text x="340" y="675" class="small-text">Pay per execution</text>
-  </g>
+  <rect x="320" y="535" width="180" height="100" rx="5" fill="#8e44ad" stroke="#7d3c98" stroke-width="2"/>
+  <text x="410" y="565" text-anchor="middle" class="text" fill="white">Serverless</text>
+  <text x="410" y="590" text-anchor="middle" class="small-text" fill="white">AWS Lambda</text>
   
-  <!-- SOA -->
-  <g id="soa">
-    <rect x="540" y="535" width="180" height="100" rx="5" fill="#d35400" stroke="#ba4a00" stroke-width="2"/>
-    <text x="630" y="555" text-anchor="middle" class="text" fill="white">SOA</text>
-    <text x="630" y="580" text-anchor="middle" class="small-text" fill="white">Enterprise Service Bus</text>
-    <text x="630" y="600" text-anchor="middle" class="small-text" fill="white">SOAP/XML</text>
-    <text x="560" y="655" class="small-text">Enterprise legacy</text>
-    <text x="560" y="675" class="small-text">Reusable services</text>
-  </g>
+  <rect x="540" y="535" width="180" height="100" rx="5" fill="#d35400" stroke="#ba4a00" stroke-width="2"/>
+  <text x="630" y="565" text-anchor="middle" class="text" fill="white">SOA</text>
+  <text x="630" y="590" text-anchor="middle" class="small-text" fill="white">Service Bus</text>
   
-  <!-- Hexagonal -->
-  <g id="hexagonal">
-    <rect x="760" y="535" width="180" height="100" rx="5" fill="#c0392b" stroke="#a93226" stroke-width="2"/>
-    <text x="850" y="555" text-anchor="middle" class="text" fill="white">Hexagonal</text>
-    <text x="850" y="580" text-anchor="middle" class="small-text" fill="white">Ports & Adapters</text>
-    <text x="850" y="600" text-anchor="middle" class="small-text" fill="white">Core isolation</text>
-    <text x="780" y="655" class="small-text">Highly testable</text>
-    <text x="780" y="675" class="small-text">Tech agnostic</text>
-  </g>
+  <rect x="760" y="535" width="180" height="100" rx="5" fill="#c0392b" stroke="#a93226" stroke-width="2"/>
+  <text x="850" y="565" text-anchor="middle" class="text" fill="white">Hexagonal</text>
+  <text x="850" y="590" text-anchor="middle" class="small-text" fill="white">Ports + Adapters</text>
   
-  <!-- CQRS -->
-  <g id="cqrs">
-    <rect x="980" y="535" width="180" height="100" rx="5" fill="#2980b9" stroke="#21618c" stroke-width="2"/>
-    <text x="1070" y="555" text-anchor="middle" class="text" fill="white">CQRS</text>
-    <text x="1070" y="580" text-anchor="middle" class="small-text" fill="white">Read/Write Split</text>
-    <text x="1070" y="600" text-anchor="middle" class="small-text" fill="white">Optimized queries</text>
-    <text x="1000" y="655" class="small-text">High performance</text>
-    <text x="1000" y="675" class="small-text">Complex systems</text>
-  </g>
-  
-  <!-- Legend -->
-  <g id="legend">
-    <text x="100" y="720" class="text" font-weight="bold">Choose Based On:</text>
-    <text x="100" y="745" class="small-text">🎯 Team Size   📈 Scale Needs   💰 Budget   ⏱️ Time to Market   🔧 Complexity</text>
-  </g>
-  
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#34495e"/>
-    </marker>
-  </defs>
+  <rect x="980" y="535" width="180" height="100" rx="5" fill="#2980b9" stroke="#21618c" stroke-width="2"/>
+  <text x="1070" y="565" text-anchor="middle" class="text" fill="white">CQRS</text>
+  <text x="1070" y="590" text-anchor="middle" class="small-text" fill="white">Read/Write Split</text>
 </svg>
