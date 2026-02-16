@@ -26,7 +26,7 @@ A comprehensive tutorial on modern software architecture patterns with visual di
 
 ## 📊 Architecture Comparison Overview
 
-![Architecture Comparison](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/diagrams/architecture-comparison-overview.svg)
+![Architecture Comparison](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/architecture-comparison-overview.svg)
 
 ---
 
@@ -34,7 +34,7 @@ A comprehensive tutorial on modern software architecture patterns with visual di
 
 ### 1. Monolithic Architecture
 
-![Monolithic Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/diagrams/monolithic-architecture.svg)
+![Monolithic Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/monolithic-architecture.svg)
 
 **Definition:** All components of an application are tightly integrated into a single codebase and deployed as one unit.
 
@@ -82,7 +82,7 @@ Single Application
 
 ### 2. Layered (N-Tier) Architecture
 
-![Layered Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/diagrams/layered-architecture.svg)
+![Layered Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/layered-architecture.svg)
 
 **Definition:** Application is divided into horizontal layers, where each layer has a specific responsibility.
 
@@ -126,7 +126,7 @@ Single Application
 
 ### 3. Client-Server Architecture
 
-![Client-Server Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/diagrams/client-server-architecture.svg)
+![Client-Server Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/client-server-architecture.svg)
 
 **Definition:** Application is divided into clients (request services) and servers (provide services).
 
@@ -161,7 +161,7 @@ Multiple Clients ←→ Central Server ←→ Database
 
 ### 4. Decoupled/Headless Architecture
 
-![Decoupled Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/diagrams/decoupled-architecture.svg)
+![Decoupled Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/decoupled-architecture.svg)
 
 **Definition:** Frontend and backend are completely separated and communicate through APIs.
 
@@ -207,7 +207,7 @@ Angular 19 ←→ Rails 8 API ←→ MySQL + Elasticsearch
 
 ### 5. Microservices Architecture
 
-![Microservices Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/diagrams/microservices-architecture.svg)
+![Microservices Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/microservices-architecture.svg)
 
 **Definition:** Application is composed of small, independent services that communicate through APIs.
 
@@ -262,7 +262,7 @@ API Gateway
 
 ### 6. Event-Driven Architecture
 
-![Event-Driven Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/diagrams/event-driven-architecture.svg)
+![Event-Driven Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/event-driven-architecture.svg)
 
 **Definition:** Components communicate by producing and consuming events asynchronously.
 
@@ -306,7 +306,7 @@ Producer → Event Bus → Consumer(s)
 
 ### 7. Serverless Architecture
 
-![Serverless Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/diagrams/serverless-architecture.svg)
+![Serverless Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/serverless-architecture.svg)
 
 **Definition:** Application logic runs in stateless compute containers managed by cloud providers.
 
@@ -352,7 +352,7 @@ Client → API Gateway → Lambda Functions → Services
 
 ### 8. Service-Oriented Architecture (SOA)
 
-![SOA Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/diagrams/soa-architecture.svg)
+![SOA Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/soa-architecture.svg)
 
 **Definition:** Application functionality is provided as services accessed through a communication protocol (often SOAP).
 
@@ -387,7 +387,7 @@ Enterprise Service Bus (ESB)
 
 ### 9. Hexagonal Architecture (Ports & Adapters)
 
-![Hexagonal Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/diagrams/hexagonal-architecture.svg)
+![Hexagonal Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/hexagonal-architecture.svg)
 
 **Definition:** Application core is isolated from external concerns through ports and adapters.
 
@@ -421,7 +421,7 @@ Enterprise Service Bus (ESB)
 
 ### 10. CQRS Architecture
 
-![CQRS Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/diagrams/cqrs-architecture.svg)
+![CQRS Architecture](https://raw.githubusercontent.com/Majd2404/software-architecture-patterns/main/cqrs-architecture.svg)
 
 **Definition:** Separates read and write operations into different models.
 
