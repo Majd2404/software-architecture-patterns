@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <style>
+      .title { font: bold 24px sans-serif; fill: #2c3e50; }
+      .subtitle { font: bold 16px sans-serif; fill: #34495e; }
+      .text { font: 13px sans-serif; fill: #555; }
+      .small-text { font: 11px sans-serif; fill: #666; }
+      .service-box { stroke-width: 2; }
+      .white-text { fill: white; font-weight: bold; }
+      .arrow { fill: none; stroke: #34495e; stroke-width: 2; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#34495e"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" class="title">Microservices Architecture</text>
+  <text x="600" y="65" text-anchor="middle" class="text">Application composed of small, independent services</text>
+  
+  <!-- Client -->
+  <rect x="500" y="100" width="200" height="50" rx="5" fill="#ecf0f1" stroke="#95a5a6" stroke-width="2"/>
+  <text x="600" y="130" text-anchor="middle" class="text">👥 Clients (Web, Mobile, Desktop)</text>
+  
+  <path d="M 600 150 L 600 180" class="arrow"/>
+  
+  <!-- API Gateway -->
+  <rect x="450" y="180" width="300" height="60" rx="5" fill="#95a5a6" stroke="#7f8c8d" stroke-width="3"/>
+  <text x="600" y="205" text-anchor="middle" class="subtitle white-text">API Gateway</text>
+  <text x="600" y="225" text-anchor="middle" class="small-text white-text">Routing • Authentication • Rate Limiting</text>
+  
+  <!-- Arrows from Gateway to Services -->
+  <path d="M 500 240 L 180 310" class="arrow"/>
+  <path d="M 550 240 L 380 310" class="arrow"/>
+  <path d="M 650 240 L 620 310" class="arrow"/>
+  <path d="M 700 240 L 820 310" class="arrow"/>
+  <path d="M 750 240 L 1020 310" class="arrow"/>
+  
+  <!-- Microservices Row 1 -->
+  <g id="user-service">
+    <rect x="80" y="310" width="200" height="120" rx="8" fill="#3498db" stroke="#2980b9" class="service-box"/>
+    <text x="180" y="340" text-anchor="middle" class="subtitle white-text">User Service</text>
+    <text x="180" y="365" text-anchor="middle" class="small-text white-text">Node.js</text>
+    <text x="180" y="385" text-anchor="middle" class="small-text white-text">• Registration</text>
+    <text x="180" y="402" text-anchor="middle" class="small-text white-text">• Authentication</text>
+    <text x="180" y="419" text-anchor="middle" class="small-text white-text">• Profile management</text>
+    
+    <rect x="110" y="445" width="140" height="30" rx="3" fill="#e67e22" stroke="#d35400" stroke-width="1"/>
+    <text x="180" y="465" text-anchor="middle" class="small-text white-text">User DB (Postgres)</text>
+  </g>
+  
+  <g id="product-service">
+    <rect x="300" y="310" width="200" height="120" rx="8" fill="#e74c3c" stroke="#c0392b" class="service-box"/>
+    <text x="400" y="340" text-anchor="middle" class="subtitle white-text">Product Service</text>
+    <text x="400" y="365" text-anchor="middle" class="small-text white-text">Java Spring</text>
+    <text x="400" y="385" text-anchor="middle" class="small-text white-text">• Catalog</text>
+    <text x="400" y="402" text-anchor="middle" class="small-text white-text">• Inventory</text>
+    <text x="400" y="419" text-anchor="middle" class="small-text white-text">• Search</text>
+    
+    <rect x="330" y="445" width="140" height="30" rx="3" fill="#e67e22" stroke="#d35400" stroke-width="1"/>
+    <text x="400" y="465" text-anchor="middle" class="small-text white-text">Product DB (MySQL)</text>
+  </g>
+  
+  <g id="order-service">
+    <rect x="520" y="310" width="200" height="120" rx="8" fill="#27ae60" stroke="#229954" class="service-box"/>
+    <text x="620" y="340" text-anchor="middle" class="subtitle white-text">Order Service</text>
+    <text x="620" y="365" text-anchor="middle" class="small-text white-text">Python/Django</text>
+    <text x="620" y="385" text-anchor="middle" class="small-text white-text">• Cart</text>
+    <text x="620" y="402" text-anchor="middle" class="small-text white-text">• Checkout</text>
+    <text x="620" y="419" text-anchor="middle" class="small-text white-text">• Order history</text>
+    
+    <rect x="550" y="445" width="140" height="30" rx="3" fill="#e67e22" stroke="#d35400" stroke-width="1"/>
+    <text x="620" y="465" text-anchor="middle" class="small-text white-text">Order DB (Mongo)</text>
+  </g>
+  
+  <g id="payment-service">
+    <rect x="740" y="310" width="200" height="120" rx="8" fill="#9b59b6" stroke="#8e44ad" class="service-box"/>
+    <text x="840" y="340" text-anchor="middle" class="subtitle white-text">Payment Service</text>
+    <text x="840" y="365" text-anchor="middle" class="small-text white-text">Go</text>
+    <text x="840" y="385" text-anchor="middle" class="small-text white-text">• Payments</text>
+    <text x="840" y="402" text-anchor="middle" class="small-text white-text">• Stripe/PayPal</text>
+    <text x="840" y="419" text-anchor="middle" class="small-text white-text">• Refunds</text>
+    
+    <rect x="770" y="445" width="140" height="30" rx="3" fill="#e67e22" stroke="#d35400" stroke-width="1"/>
+    <text x="840" y="465" text-anchor="middle" class="small-text white-text">Payment DB</text>
+  </g>
+  
+  <g id="notification-service">
+    <rect x="960" y="310" width="200" height="120" rx="8" fill="#f39c12" stroke="#d68910" class="service-box"/>
+    <text x="1060" y="340" text-anchor="middle" class="subtitle white-text">Notification Service</text>
+    <text x="1060" y="365" text-anchor="middle" class="small-text white-text">Ruby on Rails</text>
+    <text x="1060" y="385" text-anchor="middle" class="small-text white-text">• Email</text>
+    <text x="1060" y="402" text-anchor="middle" class="small-text white-text">• SMS</text>
+    <text x="1060" y="419" text-anchor="middle" class="small-text white-text">• Push notifications</text>
+    
+    <rect x="990" y="445" width="140" height="30" rx="3" fill="#e67e22" stroke="#d35400" stroke-width="1"/>
+    <text x="1060" y="465" text-anchor="middle" class="small-text white-text">Queue (RabbitMQ)</text>
+  </g>
+  
+  <!-- Message Queue/Event Bus -->
+  <rect x="300" y="520" width="600" height="50" rx="5" fill="#16a085" stroke="#138d75" stroke-width="2"/>
+  <text x="600" y="545" text-anchor="middle" class="text white-text">Message Queue / Event Bus (Kafka, RabbitMQ)</text>
+  <text x="600" y="562" text-anchor="middle" class="small-text white-text">Inter-service communication</text>
+  
+  <!-- Service Discovery & Config -->
+  <g id="infrastructure">
+    <rect x="50" y="600" width="250" height="150" rx="8" fill="#34495e" stroke="#2c3e50" stroke-width="2"/>
+    <text x="175" y="625" text-anchor="middle" class="subtitle white-text">Infrastructure</text>
+    <text x="175" y="655" text-anchor="middle" class="small-text white-text">• Service Discovery (Consul)</text>
+    <text x="175" y="680" text-anchor="middle" class="small-text white-text">• Config Server</text>
+    <text x="175" y="705" text-anchor="middle" class="small-text white-text">• Load Balancer</text>
+    <text x="175" y="730" text-anchor="middle" class="small-text white-text">• Container Orchestration (K8s)</text>
+  </g>
+  
+  <!-- Monitoring -->
+  <g id="monitoring">
+    <rect x="330" y="600" width="250" height="150" rx="8" fill="#c0392b" stroke="#a93226" stroke-width="2"/>
+    <text x="455" y="625" text-anchor="middle" class="subtitle white-text">Monitoring & Logging</text>
+    <text x="455" y="655" text-anchor="middle" class="small-text white-text">• Prometheus (Metrics)</text>
+    <text x="455" y="680" text-anchor="middle" class="small-text white-text">• ELK Stack (Logs)</text>
+    <text x="455" y="705" text-anchor="middle" class="small-text white-text">• Grafana (Dashboards)</text>
+    <text x="455" y="730" text-anchor="middle" class="small-text white-text">• Distributed Tracing</text>
+  </g>
+  
+  <!-- Benefits -->
+  <g id="benefits">
+    <rect x="610" y="600" width="280" height="150" rx="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+    <text x="750" y="625" text-anchor="middle" class="subtitle white-text">✅ Benefits</text>
+    <text x="630" y="655" class="small-text white-text">• Independent deployment</text>
+    <text x="630" y="680" class="small-text white-text">• Technology diversity</text>
+    <text x="630" y="705" class="small-text white-text">• Fault isolation</text>
+    <text x="630" y="730" class="small-text white-text">• Team autonomy</text>
+  </g>
+  
+  <!-- Challenges -->
+  <g id="challenges">
+    <rect x="910" y="600" width="250" height="150" rx="8" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+    <text x="1035" y="625" text-anchor="middle" class="subtitle white-text">⚠️ Challenges</text>
+    <text x="930" y="655" class="small-text white-text">• Complex infrastructure</text>
+    <text x="930" y="680" class="small-text white-text">• Data consistency</text>
+    <text x="930" y="705" class="small-text white-text">• Network latency</text>
+    <text x="930" y="730" class="small-text white-text">• Testing complexity</text>
+  </g>
+</svg>
