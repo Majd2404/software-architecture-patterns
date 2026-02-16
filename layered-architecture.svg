@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <defs>
+    <style>
+      .title { font: bold 24px sans-serif; fill: #2c3e50; }
+      .subtitle { font: bold 16px sans-serif; fill: #34495e; }
+      .text { font: 14px sans-serif; fill: #555; }
+      .small-text { font: 12px sans-serif; fill: #666; }
+      .white-text { fill: white; font-weight: bold; }
+      .arrow { fill: none; stroke: #2c3e50; stroke-width: 2; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" class="title">Layered (N-Tier) Architecture</text>
+  <text x="450" y="65" text-anchor="middle" class="text">Application organized into horizontal layers with specific responsibilities</text>
+  
+  <!-- Main Container -->
+  <rect x="150" y="100" width="600" height="480" rx="10" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- Presentation Layer -->
+  <g id="presentation">
+    <rect x="200" y="130" width="500" height="90" rx="5" fill="#3498db" stroke="#2980b9" stroke-width="3"/>
+    <text x="450" y="160" text-anchor="middle" class="subtitle white-text">Presentation Layer</text>
+    <text x="450" y="185" text-anchor="middle" class="text white-text">User Interface • Views • Templates • Controllers</text>
+    <text x="450" y="205" text-anchor="middle" class="small-text white-text">Handles user interaction and displays data</text>
+  </g>
+  
+  <path d="M 450 220 L 450 245" class="arrow"/>
+  <text x="470" y="235" class="small-text">HTTP Requests</text>
+  
+  <!-- Business Logic Layer -->
+  <g id="business-logic">
+    <rect x="200" y="245" width="500" height="90" rx="5" fill="#9b59b6" stroke="#8e44ad" stroke-width="3"/>
+    <text x="450" y="275" text-anchor="middle" class="subtitle white-text">Business Logic Layer</text>
+    <text x="450" y="300" text-anchor="middle" class="text white-text">Services • Business Rules • Validation</text>
+    <text x="450" y="320" text-anchor="middle" class="small-text white-text">Implements core business functionality</text>
+  </g>
+  
+  <path d="M 450 335 L 450 360" class="arrow"/>
+  <text x="470" y="350" class="small-text">Method Calls</text>
+  
+  <!-- Data Access Layer -->
+  <g id="data-access">
+    <rect x="200" y="360" width="500" height="90" rx="5" fill="#1abc9c" stroke="#16a085" stroke-width="3"/>
+    <text x="450" y="390" text-anchor="middle" class="subtitle white-text">Data Access Layer</text>
+    <text x="450" y="415" text-anchor="middle" class="text white-text">Repositories • DAO • ORM (ActiveRecord, Hibernate)</text>
+    <text x="450" y="435" text-anchor="middle" class="small-text white-text">Abstracts database operations</text>
+  </g>
+  
+  <path d="M 450 450 L 450 475" class="arrow"/>
+  <text x="470" y="465" class="small-text">SQL Queries</text>
+  
+  <!-- Database Layer -->
+  <g id="database">
+    <rect x="200" y="475" width="500" height="85" rx="5" fill="#f39c12" stroke="#d68910" stroke-width="3"/>
+    <text x="450" y="505" text-anchor="middle" class="subtitle white-text">Database Layer</text>
+    <text x="450" y="530" text-anchor="middle" class="text white-text">MySQL • PostgreSQL • MongoDB</text>
+    <text x="450" y="550" text-anchor="middle" class="small-text white-text">Stores and retrieves data</text>
+  </g>
+  
+  <!-- Data Flow Example -->
+  <g id="example">
+    <rect x="50" y="130" width="120" height="430" rx="5" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+    <text x="110" y="155" text-anchor="middle" class="subtitle" fill="#27ae60">Data Flow</text>
+    
+    <text x="60" y="190" class="small-text" fill="#27ae60">1. User clicks</text>
+    <text x="70" y="210" class="small-text" fill="#27ae60">"Login"</text>
+    
+    <path d="M 110 220 L 110 250" stroke="#27ae60" stroke-width="2" marker-end="url(#green-arrow)"/>
+    
+    <text x="60" y="270" class="small-text" fill="#27ae60">2. Controller</text>
+    <text x="70" y="290" class="small-text" fill="#27ae60">validates</text>
+    
+    <path d="M 110 300 L 110 330" stroke="#27ae60" stroke-width="2" marker-end="url(#green-arrow)"/>
+    
+    <text x="60" y="350" class="small-text" fill="#27ae60">3. Service</text>
+    <text x="70" y="370" class="small-text" fill="#27ae60">checks logic</text>
+    
+    <path d="M 110 380 L 110 410" stroke="#27ae60" stroke-width="2" marker-end="url(#green-arrow)"/>
+    
+    <text x="60" y="430" class="small-text" fill="#27ae60">4. Repository</text>
+    <text x="70" y="450" class="small-text" fill="#27ae60">queries DB</text>
+    
+    <path d="M 110 460 L 110 490" stroke="#27ae60" stroke-width="2" marker-end="url(#green-arrow)"/>
+    
+    <text x="60" y="510" class="small-text" fill="#27ae60">5. Database</text>
+    <text x="70" y="530" class="small-text" fill="#27ae60">returns user</text>
+  </g>
+  
+  <!-- Pros & Cons -->
+  <g id="info">
+    <rect x="50" y="590" width="380" height="50" rx="5" fill="#d5f4e6" stroke="#27ae60" stroke-width="2"/>
+    <text x="60" y="612" class="text" fill="#27ae60">✅ Clear separation • Easy to understand • Testable layers</text>
+    <text x="60" y="632" class="text" fill="#27ae60">✅ Industry standard • Good for enterprise applications</text>
+    
+    <rect x="470" y="590" width="380" height="50" rx="5" fill="#fadbd8" stroke="#e74c3c" stroke-width="2"/>
+    <text x="480" y="612" class="text" fill="#c0392b">❌ Can become monolithic • Changes ripple through layers</text>
+    <text x="480" y="632" class="text" fill="#c0392b">❌ Database becomes bottleneck • Performance overhead</text>
+  </g>
+  
+  <defs>
+    <marker id="green-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#27ae60"/>
+    </marker>
+  </defs>
+</svg>
