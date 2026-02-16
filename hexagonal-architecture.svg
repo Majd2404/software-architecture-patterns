@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <defs>
+    <style>
+      .title { font: bold 24px sans-serif; fill: #2c3e50; }
+      .text { font: 14px sans-serif; fill: #555; }
+      .small-text { font: 12px sans-serif; fill: #666; }
+      .white-text { fill: white; font-weight: bold; }
+    </style>
+  </defs>
+  
+  <text x="450" y="40" text-anchor="middle" class="title">Hexagonal Architecture (Ports & Adapters)</text>
+  <text x="450" y="65" text-anchor="middle" class="text">Application core isolated from external dependencies</text>
+  
+  <!-- Core -->
+  <polygon points="450,150 550,200 550,300 450,350 350,300 350,200" fill="#e74c3c" stroke="#c0392b" stroke-width="3"/>
+  <text x="450" y="240" text-anchor="middle" class="text white-text" font-size="16">Application Core</text>
+  <text x="450" y="265" text-anchor="middle" class="small-text white-text">Business Logic</text>
+  <text x="450" y="285" text-anchor="middle" class="small-text white-text">Domain Models</text>
+  
+  <!-- Ports -->
+  <circle cx="450" cy="130" r="15" fill="#f39c12" stroke="#d68910" stroke-width="2"/>
+  <text x="450" y="110" text-anchor="middle" class="small-text">HTTP Port</text>
+  
+  <circle cx="570" cy="175" r="15" fill="#f39c12" stroke="#d68910" stroke-width="2"/>
+  <text x="610" y="180" text-anchor="middle" class="small-text">DB Port</text>
+  
+  <circle cx="570" cy="325" r="15" fill="#f39c12" stroke="#d68910" stroke-width="2"/>
+  <text x="610" y="330" text-anchor="middle" class="small-text">Email Port</text>
+  
+  <circle cx="330" cy="325" r="15" fill="#f39c12" stroke="#d68910" stroke-width="2"/>
+  <text x="290" y="330" text-anchor="middle" class="small-text">Queue Port</text>
+  
+  <!-- Adapters -->
+  <rect x="350" y="80" width="200" height="40" rx="5" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="450" y="105" text-anchor="middle" class="text white-text">REST Adapter</text>
+  
+  <rect x="590" y="155" width="200" height="40" rx="5" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+  <text x="690" y="180" text-anchor="middle" class="text white-text">PostgreSQL Adapter</text>
+  
+  <rect x="590" y="305" width="200" height="40" rx="5" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="690" y="330" text-anchor="middle" class="text white-text">SMTP Adapter</text>
+  
+  <rect x="110" y="305" width="200" height="40" rx="5" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+  <text x="210" y="330" text-anchor="middle" class="text white-text">RabbitMQ Adapter</text>
+  
+  <rect x="50" y="420" width="800" height="200" rx="5" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+  <text x="450" y="450" text-anchor="middle" class="text" fill="#27ae60" font-weight="bold">Key Principles</text>
+  <text x="70" y="480" class="small-text" fill="#27ae60">✓ Core business logic is independent of external frameworks</text>
+  <text x="70" y="505" class="small-text" fill="#27ae60">✓ Ports define interfaces, Adapters implement them</text>
+  <text x="70" y="530" class="small-text" fill="#27ae60">✓ Easy to swap implementations (PostgreSQL → MongoDB)</text>
+  <text x="70" y="555" class="small-text" fill="#27ae60">✓ Highly testable - mock adapters in tests</text>
+  <text x="70" y="580" class="small-text" fill="#27ae60">✓ Technology agnostic core</text>
+  <text x="70" y="605" class="small-text" fill="#27ae60">Best for: Complex domain logic, need flexibility in infrastructure</text>
+</svg>
