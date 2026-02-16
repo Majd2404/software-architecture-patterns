@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <style>
+      .title { font: bold 24px sans-serif; fill: #2c3e50; }
+      .subtitle { font: bold 16px sans-serif; fill: #34495e; }
+      .text { font: 14px sans-serif; fill: #555; }
+      .small-text { font: 12px sans-serif; fill: #666; }
+      .mono-box { fill: #e74c3c; stroke: #c0392b; stroke-width: 3; }
+      .layer-box { fill: #ecf0f1; stroke: #95a5a6; stroke-width: 2; }
+      .db-box { fill: #f39c12; stroke: #d68910; stroke-width: 2; }
+      .white-text { fill: white; font-weight: bold; }
+      .arrow { fill: none; stroke: #2c3e50; stroke-width: 2; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" class="title">Monolithic Architecture</text>
+  <text x="400" y="65" text-anchor="middle" class="text">All components in a single, tightly-coupled application</text>
+  
+  <!-- User/Client -->
+  <g id="users">
+    <rect x="100" y="120" width="80" height="60" rx="5" class="layer-box"/>
+    <text x="140" y="155" text-anchor="middle" class="text">👤 User</text>
+    
+    <rect x="220" y="120" width="80" height="60" rx="5" class="layer-box"/>
+    <text x="260" y="155" text-anchor="middle" class="text">📱 User</text>
+    
+    <rect x="340" y="120" width="80" height="60" rx="5" class="layer-box"/>
+    <text x="380" y="155" text-anchor="middle" class="text">💻 User</text>
+  </g>
+  
+  <!-- Arrows to Monolith -->
+  <path d="M 140 180 L 220 230" class="arrow"/>
+  <path d="M 260 180 L 260 230" class="arrow"/>
+  <path d="M 380 180 L 300 230" class="arrow"/>
+  
+  <!-- Single Monolithic Application -->
+  <rect x="150" y="230" width="500" height="280" rx="10" class="mono-box"/>
+  <text x="400" y="260" text-anchor="middle" class="subtitle white-text">Single Application (Monolith)</text>
+  
+  <!-- UI Layer -->
+  <rect x="180" y="280" width="440" height="50" rx="5" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="400" y="310" text-anchor="middle" class="text white-text">User Interface Layer (Views/Templates)</text>
+  
+  <!-- Business Logic -->
+  <rect x="180" y="345" width="440" height="50" rx="5" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="400" y="375" text-anchor="middle" class="text white-text">Business Logic Layer (Controllers/Services)</text>
+  
+  <!-- Data Access -->
+  <rect x="180" y="410" width="440" height="50" rx="5" fill="#1abc9c" stroke="#16a085" stroke-width="2"/>
+  <text x="400" y="440" text-anchor="middle" class="text white-text">Data Access Layer (Models/ORM)</text>
+  
+  <!-- Note inside monolith -->
+  <text x="400" y="485" text-anchor="middle" class="small-text white-text">All layers deployed together as ONE unit</text>
+  
+  <!-- Arrow to Database -->
+  <path d="M 400 510 L 400 540" class="arrow"/>
+  
+  <!-- Database -->
+  <rect x="300" y="540" width="200" height="50" rx="5" class="db-box"/>
+  <text x="400" y="570" text-anchor="middle" class="text white-text">🗄️ Database</text>
+  
+  <!-- Pros & Cons boxes -->
+  <g id="pros">
+    <rect x="50" y="250" width="70" height="150" rx="5" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+    <text x="85" y="270" text-anchor="middle" class="small-text white-text" font-weight="bold">PROS</text>
+    <text x="60" y="290" class="small-text white-text">✓ Simple</text>
+    <text x="60" y="310" class="small-text white-text">✓ Fast</text>
+    <text x="60" y="330" class="small-text white-text">✓ Easy</text>
+    <text x="60" y="350" class="small-text white-text">  test</text>
+    <text x="60" y="370" class="small-text white-text">✓ Less</text>
+    <text x="60" y="390" class="small-text white-text">  infra</text>
+  </g>
+  
+  <g id="cons">
+    <rect x="680" y="250" width="70" height="150" rx="5" fill="#c0392b" stroke="#a93226" stroke-width="2"/>
+    <text x="715" y="270" text-anchor="middle" class="small-text white-text" font-weight="bold">CONS</text>
+    <text x="690" y="290" class="small-text white-text">✗ Hard</text>
+    <text x="690" y="310" class="small-text white-text">  scale</text>
+    <text x="690" y="330" class="small-text white-text">✗ Tight</text>
+    <text x="690" y="350" class="small-text white-text">  couple</text>
+    <text x="690" y="370" class="small-text white-text">✗ Tech</text>
+    <text x="690" y="390" class="small-text white-text">  lock-in</text>
+  </g>
+</svg>
