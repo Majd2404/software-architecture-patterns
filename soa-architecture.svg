@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <defs>
+    <style>
+      .title { font: bold 24px sans-serif; fill: #2c3e50; }
+      .text { font: 14px sans-serif; fill: #555; }
+      .small-text { font: 12px sans-serif; fill: #666; }
+      .white-text { fill: white; font-weight: bold; }
+    </style>
+  </defs>
+  
+  <text x="450" y="40" text-anchor="middle" class="title">Service-Oriented Architecture (SOA)</text>
+  <text x="450" y="65" text-anchor="middle" class="text">Services communicate through Enterprise Service Bus (ESB)</text>
+  
+  <rect x="300" y="150" width="300" height="80" rx="5" fill="#f39c12" stroke="#d68910" stroke-width="3"/>
+  <text x="450" y="185" text-anchor="middle" class="text white-text" font-size="18">Enterprise Service Bus (ESB)</text>
+  <text x="450" y="210" text-anchor="middle" class="small-text white-text">Message routing, transformation, orchestration</text>
+  
+  <rect x="100" y="280" width="150" height="80" rx="5" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="175" y="315" text-anchor="middle" class="text white-text">Customer</text>
+  <text x="175" y="335" text-anchor="middle" class="text white-text">Service</text>
+  
+  <rect x="300" y="280" width="150" height="80" rx="5" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="375" y="315" text-anchor="middle" class="text white-text">Billing</text>
+  <text x="375" y="335" text-anchor="middle" class="text white-text">Service</text>
+  
+  <rect x="500" y="280" width="150" height="80" rx="5" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+  <text x="575" y="315" text-anchor="middle" class="text white-text">Inventory</text>
+  <text x="575" y="335" text-anchor="middle" class="text white-text">Service</text>
+  
+  <rect x="700" y="280" width="150" height="80" rx="5" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="775" y="315" text-anchor="middle" class="text white-text">Shipping</text>
+  <text x="775" y="335" text-anchor="middle" class="text white-text">Service</text>
+  
+  <rect x="50" y="410" width="380" height="120" rx="5" fill="#d5f4e6" stroke="#27ae60" stroke-width="2"/>
+  <text x="240" y="435" text-anchor="middle" class="text" fill="#27ae60" font-weight="bold">✅ Benefits</text>
+  <text x="70" y="460" class="small-text" fill="#27ae60">• Service reusability across applications</text>
+  <text x="70" y="485" class="small-text" fill="#27ae60">• Platform and technology independence</text>
+  <text x="70" y="510" class="small-text" fill="#27ae60">• Good for enterprise integration</text>
+  
+  <rect x="470" y="410" width="380" height="120" rx="5" fill="#fadbd8" stroke="#e74c3c" stroke-width="2"/>
+  <text x="660" y="435" text-anchor="middle" class="text" fill="#c0392b" font-weight="bold">❌ Challenges</text>
+  <text x="490" y="460" class="small-text" fill="#c0392b">• ESB can become bottleneck</text>
+  <text x="490" y="485" class="small-text" fill="#c0392b">• SOAP protocol overhead</text>
+  <text x="490" y="510" class="small-text" fill="#c0392b">• Complex governance required</text>
+</svg>
