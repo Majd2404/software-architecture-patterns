@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650">
+  <defs>
+    <style>
+      .title { font: bold 24px sans-serif; fill: #2c3e50; }
+      .text { font: 14px sans-serif; fill: #555; }
+      .small-text { font: 12px sans-serif; fill: #666; }
+      .lambda-box { fill: #ff9900; stroke: #d87000; stroke-width: 2; }
+      .service-box { fill: #3498db; stroke: #2980b9; stroke-width: 2; }
+      .white-text { fill: white; font-weight: bold; }
+      .arrow { fill: none; stroke: #2c3e50; stroke-width: 2; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+    </marker>
+  </defs>
+  
+  <text x="500" y="40" text-anchor="middle" class="title">Serverless Architecture</text>
+  <text x="500" y="65" text-anchor="middle" class="text">Functions-as-a-Service (FaaS) - No server management required</text>
+  
+  <!-- Client -->
+  <rect x="400" y="100" width="200" height="50" rx="5" fill="#ecf0f1" stroke="#95a5a6" stroke-width="2"/>
+  <text x="500" y="130" text-anchor="middle" class="text">Client Application</text>
+  
+  <path d="M 500 150 L 500 185" class="arrow"/>
+  
+  <!-- API Gateway -->
+  <rect x="350" y="185" width="300" height="60" rx="5" fill="#95a5a6" stroke="#7f8c8d" stroke-width="2"/>
+  <text x="500" y="210" text-anchor="middle" class="text white-text" font-size="16">API Gateway</text>
+  <text x="500" y="230" text-anchor="middle" class="small-text white-text">Routes requests to appropriate functions</text>
+  
+  <!-- Arrows to Lambda Functions -->
+  <path d="M 450 245 L 180 310" class="arrow"/>
+  <path d="M 500 245 L 400 310" class="arrow"/>
+  <path d="M 550 245 L 600 310" class="arrow"/>
+  <path d="M 550 245 L 820 310" class="arrow"/>
+  
+  <!-- Lambda Functions -->
+  <g id="functions">
+    <rect x="80" y="310" width="200" height="90" rx="5" class="lambda-box"/>
+    <text x="180" y="340" text-anchor="middle" class="text white-text">User Function</text>
+    <text x="180" y="360" text-anchor="middle" class="small-text white-text">Node.js</text>
+    <text x="180" y="380" text-anchor="middle" class="small-text white-text">POST /users</text>
+    <text x="180" y="395" text-anchor="middle" class="small-text white-text">Runs only when invoked</text>
+    
+    <rect x="300" y="310" width="200" height="90" rx="5" class="lambda-box"/>
+    <text x="400" y="340" text-anchor="middle" class="text white-text">Product Function</text>
+    <text x="400" y="360" text-anchor="middle" class="small-text white-text">Python</text>
+    <text x="400" y="380" text-anchor="middle" class="small-text white-text">GET /products</text>
+    <text x="400" y="395" text-anchor="middle" class="small-text white-text">Auto-scales</text>
+    
+    <rect x="520" y="310" width="200" height="90" rx="5" class="lambda-box"/>
+    <text x="620" y="340" text-anchor="middle" class="text white-text">Order Function</text>
+    <text x="620" y="360" text-anchor="middle" class="small-text white-text">Go</text>
+    <text x="620" y="380" text-anchor="middle" class="small-text white-text">POST /orders</text>
+    <text x="620" y="395" text-anchor="middle" class="small-text white-text">Stateless</text>
+    
+    <rect x="740" y="310" width="200" height="90" rx="5" class="lambda-box"/>
+    <text x="840" y="340" text-anchor="middle" class="text white-text">Email Function</text>
+    <text x="840" y="360" text-anchor="middle" class="small-text white-text">Java</text>
+    <text x="840" y="380" text-anchor="middle" class="small-text white-text">Event trigger</text>
+    <text x="840" y="395" text-anchor="middle" class="small-text white-text">Pay per execution</text>
+  </g>
+  
+  <!-- Arrows to Services -->
+  <path d="M 180 400 L 180 440" class="arrow"/>
+  <path d="M 400 400 L 400 440" class="arrow"/>
+  <path d="M 620 400 L 620 440" class="arrow"/>
+  <path d="M 840 400 L 840 440" class="arrow"/>
+  
+  <!-- Managed Services -->
+  <g id="services">
+    <rect x="100" y="440" width="160" height="60" rx="5" class="service-box"/>
+    <text x="180" y="465" text-anchor="middle" class="text white-text">DynamoDB</text>
+    <text x="180" y="485" text-anchor="middle" class="small-text white-text">NoSQL Database</text>
+    
+    <rect x="320" y="440" width="160" height="60" rx="5" class="service-box"/>
+    <text x="400" y="465" text-anchor="middle" class="text white-text">S3</text>
+    <text x="400" y="485" text-anchor="middle" class="small-text white-text">Object Storage</text>
+    
+    <rect x="540" y="440" width="160" height="60" rx="5" class="service-box"/>
+    <text x="620" y="465" text-anchor="middle" class="text white-text">SQS</text>
+    <text x="620" y="485" text-anchor="middle" class="small-text white-text">Message Queue</text>
+    
+    <rect x="760" y="440" width="160" height="60" rx="5" class="service-box"/>
+    <text x="840" y="465" text-anchor="middle" class="text white-text">SES</text>
+    <text x="840" y="485" text-anchor="middle" class="small-text white-text">Email Service</text>
+  </g>
+  
+  <!-- Key Characteristics -->
+  <g id="characteristics">
+    <rect x="50" y="530" width="900" height="100" rx="5" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+    <text x="500" y="555" text-anchor="middle" class="text" fill="#27ae60" font-weight="bold">✨ Serverless Characteristics</text>
+    
+    <text x="70" y="580" class="small-text" fill="#27ae60">✓ No server management - cloud provider handles infrastructure</text>
+    <text x="70" y="600" class="small-text" fill="#27ae60">✓ Automatic scaling - from 0 to thousands of concurrent executions</text>
+    <text x="70" y="620" class="small-text" fill="#27ae60">✓ Pay-per-use pricing - only charged for actual execution time</text>
+    
+    <text x="520" y="580" class="small-text" fill="#27ae60">⚠️ Cold start latency - first invocation takes longer</text>
+    <text x="520" y="600" class="small-text" fill="#27ae60">⚠️ Vendor lock-in - tied to cloud provider (AWS, Azure, GCP)</text>
+    <text x="520" y="620" class="small-text" fill="#27ae60">⚠️ Execution time limits - typically 15 minutes max</text>
+  </g>
+</svg>
