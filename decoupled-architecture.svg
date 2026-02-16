@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+  <defs>
+    <style>
+      .title { font: bold 24px sans-serif; fill: #2c3e50; }
+      .subtitle { font: bold 16px sans-serif; fill: #34495e; }
+      .text { font: 14px sans-serif; fill: #555; }
+      .small-text { font: 12px sans-serif; fill: #666; }
+      .frontend-box { fill: #3498db; stroke: #2980b9; stroke-width: 3; }
+      .backend-box { fill: #e74c3c; stroke: #c0392b; stroke-width: 3; }
+      .api-box { fill: #f39c12; stroke: #d68910; stroke-width: 2; }
+      .db-box { fill: #95a5a6; stroke: #7f8c8d; stroke-width: 2; }
+      .white-text { fill: white; font-weight: bold; }
+      .arrow { fill: none; stroke: #2c3e50; stroke-width: 2.5; marker-end: url(#arrowhead); }
+      .bi-arrow { fill: none; stroke: #2c3e50; stroke-width: 2.5; marker-end: url(#arrowhead); marker-start: url(#arrowback); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+    </marker>
+    <marker id="arrowback" markerWidth="10" markerHeight="10" refX="1" refY="3" orient="auto">
+      <polygon points="10 0, 0 3, 10 6" fill="#2c3e50"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" class="title">Decoupled/Headless Architecture</text>
+  <text x="500" y="65" text-anchor="middle" class="text">Frontend and Backend completely separated, communicating via API</text>
+  
+  <!-- Frontend Section -->
+  <g id="frontend-layer">
+    <rect x="50" y="100" width="400" height="240" rx="10" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="70" y="125" class="subtitle">Frontend Layer (Independent)</text>
+    
+    <!-- Web App -->
+    <rect x="80" y="145" width="110" height="80" rx="5" class="frontend-box"/>
+    <text x="135" y="175" text-anchor="middle" class="text white-text">Web App</text>
+    <text x="135" y="195" text-anchor="middle" class="small-text white-text">Angular 19</text>
+    <text x="135" y="210" text-anchor="middle" class="small-text white-text">React 18</text>
+    
+    <!-- Mobile App -->
+    <rect x="220" y="145" width="110" height="80" rx="5" class="frontend-box"/>
+    <text x="275" y="175" text-anchor="middle" class="text white-text">Mobile App</text>
+    <text x="275" y="195" text-anchor="middle" class="small-text white-text">iOS</text>
+    <text x="275" y="210" text-anchor="middle" class="small-text white-text">Android</text>
+    
+    <!-- Desktop App -->
+    <rect x="360" y="145" width="70" height="80" rx="5" class="frontend-box"/>
+    <text x="395" y="175" text-anchor="middle" class="small-text white-text">Desktop</text>
+    <text x="395" y="195" text-anchor="middle" class="small-text white-text">Electron</text>
+    
+    <!-- Frontend Features -->
+    <rect x="80" y="245" width="340" height="80" rx="5" fill="#d6eaf8" stroke="#5dade2" stroke-width="1"/>
+    <text x="250" y="265" text-anchor="middle" class="small-text">✓ TypeScript/JavaScript</text>
+    <text x="250" y="285" text-anchor="middle" class="small-text">✓ UI/UX Components</text>
+    <text x="250" y="305" text-anchor="middle" class="small-text">✓ Client-side Routing</text>
+  </g>
+  
+  <!-- API Communication -->
+  <rect x="200" y="360" width="200" height="50" rx="5" class="api-box"/>
+  <text x="300" y="375" text-anchor="middle" class="text white-text">API Communication</text>
+  <text x="300" y="395" text-anchor="middle" class="small-text white-text">REST/GraphQL (HTTP/HTTPS)</text>
+  
+  <path d="M 250 340 L 250 360" class="arrow"/>
+  <path d="M 300 410 L 300 430" class="arrow"/>
+  <text x="320" y="385" class="small-text">JSON</text>
+  
+  <!-- Backend Section -->
+  <g id="backend-layer">
+    <rect x="50" y="430" width="400" height="240" rx="10" fill="#fadbd8" stroke="#e74c3c" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="70" y="455" class="subtitle">Backend Layer (Independent)</text>
+    
+    <!-- API Server -->
+    <rect x="100" y="475" width="300" height="80" rx="5" class="backend-box"/>
+    <text x="250" y="500" text-anchor="middle" class="text white-text">API Server</text>
+    <text x="250" y="520" text-anchor="middle" class="small-text white-text">Ruby on Rails 8 / Node.js / Django</text>
+    <text x="250" y="540" text-anchor="middle" class="small-text white-text">Controllers • Models • Business Logic</text>
+    
+    <!-- Backend Features -->
+    <rect x="80" y="575" width="340" height="80" rx="5" fill="#f5b7b1" stroke="#e74c3c" stroke-width="1"/>
+    <text x="250" y="595" text-anchor="middle" class="small-text">✓ Authentication & Authorization</text>
+    <text x="250" y="615" text-anchor="middle" class="small-text">✓ Business Rules & Validation</text>
+    <text x="250" y="635" text-anchor="middle" class="small-text">✓ Database Operations</text>
+  </g>
+  
+  <!-- Arrow to Database -->
+  <path d="M 450 515 L 520 515" class="arrow"/>
+  
+  <!-- Database Section -->
+  <g id="database-layer">
+    <rect x="520" y="430" width="430" height="240" rx="10" fill="#e8f8f5" stroke="#1abc9c" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="540" y="455" class="subtitle">Data Layer</text>
+    
+    <!-- Primary Database -->
+    <rect x="560" y="475" width="160" height="70" rx="5" class="db-box"/>
+    <text x="640" y="500" text-anchor="middle" class="text white-text">MySQL/PostgreSQL</text>
+    <text x="640" y="520" text-anchor="middle" class="small-text white-text">Primary Database</text>
+    
+    <!-- Search Engine -->
+    <rect x="750" y="475" width="160" height="70" rx="5" fill="#f39c12" stroke="#d68910" stroke-width="2"/>
+    <text x="830" y="500" text-anchor="middle" class="text white-text">Elasticsearch</text>
+    <text x="830" y="520" text-anchor="middle" class="small-text white-text">Search Engine</text>
+    
+    <!-- Cache -->
+    <rect x="560" y="575" width="160" height="70" rx="5" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+    <text x="640" y="600" text-anchor="middle" class="text white-text">Redis Cache</text>
+    <text x="640" y="620" text-anchor="middle" class="small-text white-text">Session Store</text>
+    
+    <!-- Object Storage -->
+    <rect x="750" y="575" width="160" height="70" rx="5" fill="#8e44ad" stroke="#7d3c98" stroke-width="2"/>
+    <text x="830" y="600" text-anchor="middle" class="text white-text">S3 / Storage</text>
+    <text x="830" y="620" text-anchor="middle" class="small-text white-text">File Storage</text>
+  </g>
+  
+  <!-- Advantages Box -->
+  <g id="advantages">
+    <rect x="550" y="100" width="400" height="280" rx="10" fill="#d5f4e6" stroke="#27ae60" stroke-width="3"/>
+    <text x="750" y="130" text-anchor="middle" class="subtitle" fill="#27ae60">✅ Key Advantages</text>
+    
+    <text x="570" y="160" class="text">1. <tspan font-weight="bold">Independent Development</tspan></text>
+    <text x="590" y="180" class="small-text">Frontend and backend teams work in parallel</text>
+    
+    <text x="570" y="210" class="text">2. <tspan font-weight="bold">Technology Flexibility</tspan></text>
+    <text x="590" y="230" class="small-text">Use different tech stacks for each layer</text>
+    
+    <text x="570" y="260" class="text">3. <tspan font-weight="bold">Multiple Frontends</tspan></text>
+    <text x="590" y="280" class="small-text">One backend serves web, mobile, desktop</text>
+    
+    <text x="570" y="310" class="text">4. <tspan font-weight="bold">Independent Deployment</tspan></text>
+    <text x="590" y="330" class="small-text">Deploy frontend without touching backend</text>
+    
+    <text x="570" y="360" class="text">5. <tspan font-weight="bold">Better Scalability</tspan></text>
+    <text x="590" y="380" class="small-text">Scale frontend and backend separately</text>
+  </g>
+</svg>
