@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600">
+  <defs>
+    <style>
+      .title { font: bold 24px sans-serif; fill: #2c3e50; }
+      .text { font: 14px sans-serif; fill: #555; }
+      .small-text { font: 12px sans-serif; fill: #666; }
+      .white-text { fill: white; font-weight: bold; }
+      .arrow { fill: none; stroke: #2c3e50; stroke-width: 2; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+    </marker>
+  </defs>
+  
+  <text x="500" y="40" text-anchor="middle" class="title">CQRS Architecture</text>
+  <text x="500" y="65" text-anchor="middle" class="text">Command Query Responsibility Segregation - Separate read and write models</text>
+  
+  <!-- Client -->
+  <rect x="400" y="100" width="200" height="50" rx="5" fill="#ecf0f1" stroke="#95a5a6" stroke-width="2"/>
+  <text x="500" y="130" text-anchor="middle" class="text">Client Application</text>
+  
+  <!-- Split arrows -->
+  <path d="M 450 150 L 250 210" class="arrow"/>
+  <path d="M 550 150 L 750 210" class="arrow"/>
+  <text x="320" y="180" class="small-text">Commands (Write)</text>
+  <text x="650" y="180" class="small-text">Queries (Read)</text>
+  
+  <!-- Command Side (Write) -->
+  <g id="command-side">
+    <rect x="50" y="210" width="400" height="320" rx="8" fill="#fadbd8" stroke="#e74c3c" stroke-width="3"/>
+    <text x="250" y="240" text-anchor="middle" class="text" fill="#c0392b" font-weight="bold">Command Side (Write Model)</text>
+    
+    <rect x="90" y="260" width="320" height="60" rx="5" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+    <text x="250" y="285" text-anchor="middle" class="text white-text">Command Handlers</text>
+    <text x="250" y="305" text-anchor="middle" class="small-text white-text">CreateUser, UpdateOrder, DeleteProduct</text>
+    
+    <path d="M 250 320 L 250 350" class="arrow"/>
+    
+    <rect x="90" y="350" width="320" height="60" rx="5" fill="#c0392b" stroke="#a93226" stroke-width="2"/>
+    <text x="250" y="375" text-anchor="middle" class="text white-text">Domain Model</text>
+    <text x="250" y="395" text-anchor="middle" class="small-text white-text">Business logic, validations, rules</text>
+    
+    <path d="M 250 410 L 250 440" class="arrow"/>
+    
+    <rect x="120" y="440" width="260" height="70" rx="5" fill="#f39c12" stroke="#d68910" stroke-width="2"/>
+    <text x="250" y="470" text-anchor="middle" class="text white-text">Write Database</text>
+    <text x="250" y="490" text-anchor="middle" class="small-text white-text">Optimized for writes</text>
+    <text x="250" y="505" text-anchor="middle" class="small-text white-text">Normalized schema</text>
+  </g>
+  
+  <!-- Query Side (Read) -->
+  <g id="query-side">
+    <rect x="550" y="210" width="400" height="320" rx="8" fill="#d6eaf8" stroke="#3498db" stroke-width="3"/>
+    <text x="750" y="240" text-anchor="middle" class="text" fill="#2980b9" font-weight="bold">Query Side (Read Model)</text>
+    
+    <rect x="590" y="260" width="320" height="60" rx="5" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+    <text x="750" y="285" text-anchor="middle" class="text white-text">Query Handlers</text>
+    <text x="750" y="305" text-anchor="middle" class="small-text white-text">GetUsers, SearchProducts, GetOrderHistory</text>
+    
+    <path d="M 750 320 L 750 350" class="arrow"/>
+    
+    <rect x="620" y="350" width="260" height="70" rx="5" fill="#5dade2" stroke="#3498db" stroke-width="2"/>
+    <text x="750" y="380" text-anchor="middle" class="text white-text">Read Database</text>
+    <text x="750" y="400" text-anchor="middle" class="small-text white-text">Optimized for reads</text>
+    <text x="750" y="415" text-anchor="middle" class="small-text white-text">Denormalized, cached views</text>
+    
+    <rect x="590" y="440" width="150" height="70" rx="5" fill="#1abc9c" stroke="#16a085" stroke-width="2"/>
+    <text x="665" y="470" text-anchor="middle" class="small-text white-text">Elasticsearch</text>
+    <text x="665" y="490" text-anchor="middle" class="small-text white-text">Fast search</text>
+    
+    <rect x="760" y="440" width="150" height="70" rx="5" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+    <text x="835" y="470" text-anchor="middle" class="small-text white-text">Redis</text>
+    <text x="835" y="490" text-anchor="middle" class="small-text white-text">Cache</text>
+  </g>
+  
+  <!-- Synchronization -->
+  <path d="M 410 475 L 590 405" stroke="#16a085" stroke-width="3" stroke-dasharray="5,5"/>
+  <text x="500" y="430" text-anchor="middle" class="small-text" fill="#16a085" font-weight="bold">Event Stream / Sync</text>
+  
+  <!-- Benefits -->
+  <rect x="50" y="550" width="900" height="40" rx="5" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+  <text x="70" y="575" class="small-text" fill="#27ae60">✓ Optimized read/write performance • ✓ Independent scaling • ⚠️ Eventual consistency</text>
+</svg>
